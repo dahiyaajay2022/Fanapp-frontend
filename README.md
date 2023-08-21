@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+# Fanapp-frontend
+UI project that shows the Fan details and provides the facility to increase or decrease the speed and change the direction.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Prerequisites
 
-## Available Scripts
+Docker: The application is containerized, and its deployment is orchestrated using Docker Compose.
 
-In the project directory, you can run:
+Quick Start
+To quickly get started with the frontend, follow these steps:
 
-### `npm start`
+Pull the Docker Image:
+```bash
+docker pull dahiyaajay2022/fanapp-frontend:v1.1
+```
+Run with Docker Compose:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Ensure you have the latest docker-compose.yml file from the FanApp-backend repository.(git clone https://github.com/dahiyaajay2022/Fanapp-backend.git)
+```bash
+docker-compose up
+```
+This command will also start the backend and the database as they are defined in the compose file.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Access the App:
 
-### `npm test`
+Once the containers are running, access the frontEnd at:
+```bash
+http://localhost:3000
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Development
 
-### `npm run build`
+If you wish to run the project locally for development:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Install Dependencies:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Navigate to the root directory of Fanapp-frontend:
+```bash
+npm install
+```
+Start the Development Server:
+```bash
+npm start
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+This will launch the React development server, usually on http://localhost:3000.
 
-### `npm run eject`
+Interaction with Backend
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The front end interacts with the backend REST API, which by default is configured to connect to http://localhost:8080. Ensure the backend is running and accessible at this URL or modify the frontend configuration to point to a different backend URL.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
